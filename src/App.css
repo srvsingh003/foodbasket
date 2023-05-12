@@ -1,0 +1,39 @@
+.clr {
+  background: #568777;
+  padding: 15px;
+  border-radius: 50%;
+}
+/* .nav-menu:hover{
+  
+    border-bottom: 2px solid green;
+} */
+
+.nav-menu {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+}
+
+.nav-menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.nav-menu:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.cl {
+  width: fit-content;
+  padding: 20px;
+  border-radius: 50%;
+}
